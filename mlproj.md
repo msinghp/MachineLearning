@@ -16,7 +16,7 @@
 
 #### Executive Summary
 
-The exercise activity data provided  was analyzed to find out whether it was possible to predict how well the exercise was performed. Using the randomforest algorithm yielded  a 99% accuracy in predicting how well the exercises wa sperformed
+The exercise activity data provided  was analyzed to find out whether it was possible to predict how well the exercise was performed. Using the randomforest algorithm yielded  a 99% accuracy in predicting how well the exercises was performed
 
 ####Introduction
 
@@ -31,7 +31,7 @@ Trainging  data came from:
 
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
 
-The test data cames from:
+The test data came from:
 
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
@@ -75,6 +75,7 @@ The folloing results were obtained when the  trained model was run against the t
 
 
 ```r
+set.seed(157)
 trainIndex <- createDataPartition(tr$classe, p=0.60, list=FALSE)
 training<- tr[ trainIndex,]
 testing<- tr[-trainIndex,]
@@ -89,44 +90,35 @@ cfMatrix
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 2222   11    0    0    0
-##          B    7 1506    9    0    0
-##          C    0    1 1353   12    2
-##          D    3    0    6 1272    7
-##          E    0    0    0    2 1433
+##          A 2220   16    0    0    0
+##          B    9 1495    7    0    0
+##          C    1    7 1357   14    2
+##          D    2    0    4 1272    8
+##          E    0    0    0    0 1432
 ## 
 ## Overall Statistics
-##                                           
-##                Accuracy : 0.9924          
-##                  95% CI : (0.9902, 0.9942)
-##     No Information Rate : 0.2845          
-##     P-Value [Acc > NIR] : < 2.2e-16       
-##                                           
-##                   Kappa : 0.9903          
-##  Mcnemar's Test P-Value : NA              
+##                                          
+##                Accuracy : 0.9911         
+##                  95% CI : (0.9887, 0.993)
+##     No Information Rate : 0.2845         
+##     P-Value [Acc > NIR] : < 2.2e-16      
+##                                          
+##                   Kappa : 0.9887         
+##  Mcnemar's Test P-Value : NA             
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9955   0.9921   0.9890   0.9891   0.9938
-## Specificity            0.9980   0.9975   0.9977   0.9976   0.9997
-## Pos Pred Value         0.9951   0.9895   0.9890   0.9876   0.9986
-## Neg Pred Value         0.9982   0.9981   0.9977   0.9979   0.9986
+## Sensitivity            0.9946   0.9848   0.9920   0.9891   0.9931
+## Specificity            0.9971   0.9975   0.9963   0.9979   1.0000
+## Pos Pred Value         0.9928   0.9894   0.9826   0.9891   1.0000
+## Neg Pred Value         0.9979   0.9964   0.9983   0.9979   0.9984
 ## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-## Detection Rate         0.2832   0.1919   0.1724   0.1621   0.1826
-## Detection Prevalence   0.2846   0.1940   0.1744   0.1642   0.1829
-## Balanced Accuracy      0.9968   0.9948   0.9934   0.9933   0.9967
+## Detection Rate         0.2829   0.1905   0.1730   0.1621   0.1825
+## Detection Prevalence   0.2850   0.1926   0.1760   0.1639   0.1825
+## Balanced Accuracy      0.9959   0.9912   0.9941   0.9935   0.9965
 ```
  
-
-
-Cross validation
-
-Expected out of sample error
-
-
-
-
 
 ##### Test Cases
 

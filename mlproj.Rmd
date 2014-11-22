@@ -1,6 +1,7 @@
 ---
 title: ''
 output:
+  word_document: default
   html_document:
     keep_md: yes
 ---
@@ -20,7 +21,7 @@ library(caret)
 
 #### Executive Summary
 
-The exercise activity data provided  was analyzed to find out whether it was possible to predict how well the exercise was performed. Using the randomforest algorithm yielded  a 99% accuracy in predicting how well the exercises wa sperformed
+The exercise activity data provided  was analyzed to find out whether it was possible to predict how well the exercise was performed. Using the randomforest algorithm yielded  a 99% accuracy in predicting how well the exercises was performed
 
 ####Introduction
 
@@ -35,7 +36,7 @@ Trainging  data came from:
 
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
 
-The test data cames from:
+The test data came from:
 
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
@@ -78,7 +79,7 @@ The pml-training data was split 60:40 into a training set and a testing set. The
 The folloing results were obtained when the  trained model was run against the testing file
 
 ```{r, echo=TRUE}
-
+set.seed(157)
 trainIndex <- createDataPartition(tr$classe, p=0.60, list=FALSE)
 training<- tr[ trainIndex,]
 testing<- tr[-trainIndex,]
@@ -90,15 +91,6 @@ cfMatrix
 
 ```
  
-
-
-Cross validation
-
-Expected out of sample error
-
-
-
-
 
 ##### Test Cases
 
