@@ -72,6 +72,11 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="data-description" class="section level4">
 <h4>Data Description</h4>
+<p>The data for this project come from this source: <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a>.</p>
+<p>Trainging data came from:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv</a></p>
+<p>The test data cames from:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv</a></p>
 </div>
 <div id="feature-selection" class="section level4">
 <h4>Feature Selection</h4>
@@ -113,33 +118,33 @@ cfMatrix </code></pre>
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 2224    9    0    1    0
-##          B    3 1507   13    0    0
-##          C    3    1 1347   20    5
-##          D    1    0    8 1263    2
-##          E    1    1    0    2 1435
+##          A 2222   11    0    0    0
+##          B    7 1506    9    0    0
+##          C    0    1 1353   12    2
+##          D    3    0    6 1272    7
+##          E    0    0    0    2 1433
 ## 
 ## Overall Statistics
-##                                          
-##                Accuracy : 0.9911         
-##                  95% CI : (0.9887, 0.993)
-##     No Information Rate : 0.2845         
-##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16      
-##                                          
-##                   Kappa : 0.9887         
-##  Mcnemar's Test P-Value : NA             
+##                                           
+##                Accuracy : 0.9924          
+##                  95% CI : (0.9902, 0.9942)
+##     No Information Rate : 0.2845          
+##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
+##                                           
+##                   Kappa : 0.9903          
+##  Mcnemar's Test P-Value : NA              
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9964   0.9928   0.9846   0.9821   0.9951
-## Specificity            0.9982   0.9975   0.9955   0.9983   0.9994
-## Pos Pred Value         0.9955   0.9895   0.9789   0.9914   0.9972
-## Neg Pred Value         0.9986   0.9983   0.9968   0.9965   0.9989
+## Sensitivity            0.9955   0.9921   0.9890   0.9891   0.9938
+## Specificity            0.9980   0.9975   0.9977   0.9976   0.9997
+## Pos Pred Value         0.9951   0.9895   0.9890   0.9876   0.9986
+## Neg Pred Value         0.9982   0.9981   0.9977   0.9979   0.9986
 ## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-## Detection Rate         0.2835   0.1921   0.1717   0.1610   0.1829
-## Detection Prevalence   0.2847   0.1941   0.1754   0.1624   0.1834
-## Balanced Accuracy      0.9973   0.9951   0.9901   0.9902   0.9973</code></pre>
+## Detection Rate         0.2832   0.1919   0.1724   0.1621   0.1826
+## Detection Prevalence   0.2846   0.1940   0.1744   0.1642   0.1829
+## Balanced Accuracy      0.9968   0.9948   0.9934   0.9933   0.9967</code></pre>
 <p>Cross validation</p>
 <p>Expected out of sample error</p>
 </div>
