@@ -140,7 +140,9 @@ testclass1
 ## Levels: A B C D E
 ```
 
+#####Conclusion
 
+The goal of the study was to findout if was possible predict how well specific  exercises were performed.Using  the random forest algorithm, it was possible to predict how well the exercise regimen was performed with a high degree of accuracy.
 
 
 
