@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 # 
 #### Assessment of the eficacy of Exercise Activity
 
