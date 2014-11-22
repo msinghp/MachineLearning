@@ -108,9 +108,6 @@ cfMatrix
  
 
 
-Cross validation
-
-Expected out of sample error
 
 
 
