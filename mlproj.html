@@ -52,8 +52,6 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
-<div id="section" class="section level1">
-<h1></h1>
 <div id="assessment-of-the-eficacy-of-exercise-activity" class="section level4">
 <h4>Assessment of the eficacy of Exercise Activity</h4>
 </div>
@@ -70,6 +68,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 </div>
 <div id="introduction" class="section level4">
 <h4>Introduction</h4>
+<p>Devices such as Jawbone Up, Nike FuelBand, and Fitbit have been utilized by tech geek health enthusiasts to collect exercise data in an effort to improve their health. While the amount of exercise is often collected, how well the exercise is done is seldom quantified. The current data tracks data from accelerometers on the belt, forearm, arm, and dumbell of 6 participants who were asked to perform barbell lifts correctly and incorrectly in 5 different ways.</p>
 </div>
 <div id="data-description" class="section level4">
 <h4>Data Description</h4>
@@ -114,33 +113,35 @@ cfMatrix </code></pre>
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 2224   10    0    1    0
-##          B    2 1505    7    0    1
-##          C    4    3 1353   30    2
-##          D    2    0    6 1254    2
-##          E    0    0    2    1 1437
+##          A 2224    9    0    1    0
+##          B    3 1507   13    0    0
+##          C    3    1 1347   20    5
+##          D    1    0    8 1263    2
+##          E    1    1    0    2 1435
 ## 
 ## Overall Statistics
-##                                           
-##                Accuracy : 0.9907          
-##                  95% CI : (0.9883, 0.9927)
-##     No Information Rate : 0.2845          
-##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
-##                                           
-##                   Kappa : 0.9882          
-##  Mcnemar's Test P-Value : NA              
+##                                          
+##                Accuracy : 0.9911         
+##                  95% CI : (0.9887, 0.993)
+##     No Information Rate : 0.2845         
+##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16      
+##                                          
+##                   Kappa : 0.9887         
+##  Mcnemar's Test P-Value : NA             
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9964   0.9914   0.9890   0.9751   0.9965
-## Specificity            0.9980   0.9984   0.9940   0.9985   0.9995
-## Pos Pred Value         0.9951   0.9934   0.9720   0.9921   0.9979
-## Neg Pred Value         0.9986   0.9979   0.9977   0.9951   0.9992
+## Sensitivity            0.9964   0.9928   0.9846   0.9821   0.9951
+## Specificity            0.9982   0.9975   0.9955   0.9983   0.9994
+## Pos Pred Value         0.9955   0.9895   0.9789   0.9914   0.9972
+## Neg Pred Value         0.9986   0.9983   0.9968   0.9965   0.9989
 ## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-## Detection Rate         0.2835   0.1918   0.1724   0.1598   0.1832
-## Detection Prevalence   0.2849   0.1931   0.1774   0.1611   0.1835
-## Balanced Accuracy      0.9972   0.9949   0.9915   0.9868   0.9980</code></pre>
+## Detection Rate         0.2835   0.1921   0.1717   0.1610   0.1829
+## Detection Prevalence   0.2847   0.1941   0.1754   0.1624   0.1834
+## Balanced Accuracy      0.9973   0.9951   0.9901   0.9902   0.9973</code></pre>
+<p>Cross validation</p>
+<p>Expected out of sample error</p>
 </div>
 <div id="test-cases" class="section level5">
 <h5>Test Cases</h5>
@@ -154,7 +155,6 @@ testclass1</code></pre>
 <pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
 ##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
 ## Levels: A B C D E</code></pre>
-</div>
 </div>
 </div>
 

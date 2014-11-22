@@ -1,14 +1,18 @@
-# 
+---
+title: ''
+output:
+  html_document:
+    keep_md: yes
+---
 #### Assessment of the eficacy of Exercise Activity
 
 ####Loading the required Libraries
 
-
-```
-## randomForest 4.6-10
-## Type rfNews() to see new features/changes/bug fixes.
-## Loading required package: lattice
-## Loading required package: ggplot2
+```{r echo=FALSE}
+library(randomForest)
+library(class) 
+library(e1071)      		   
+library(caret)
 ```
 
 
@@ -39,8 +43,7 @@ Features were selected using the following process
 
 The above process resulted in the selection of 36 features
 
-
-```r
+```{r, echo=TRUE}
 tr <- read.csv("pml-training.csv", na.strings=c("#DIV/0!","NA") )
 tr <- tr[,c(9:160)]
 r <- grep('kur*|std*|skew*|max*|min*|var*|avg*|tot*|user|new|X|num',colnames(tr))
@@ -48,6 +51,7 @@ tr <- tr[-r]
 nacols <- c((colSums(!is.na(tr[,-ncol(tr)])) >= 0.6*nrow(tr)))
 tr <- tr[,nacols]
 tr$classe <- factor(tr$classe)
+
 ```
 
 #####How model was built
@@ -64,8 +68,8 @@ The pml-training data was split 60:40 into a training set and a testing set. The
 
 The folloing results were obtained when the  trained model was run against the testing file
 
+```{r, echo=TRUE}
 
-```r
 trainIndex <- createDataPartition(tr$classe, p=0.60, list=FALSE)
 training<- tr[ trainIndex,]
 testing<- tr[-trainIndex,]
@@ -73,40 +77,8 @@ model <- randomForest(classe~.,data=training)
 testclass <- predict(model, testing)
 cfMatrix <- confusionMatrix(testclass, testing$classe)
 cfMatrix 
-```
 
-```
-## Confusion Matrix and Statistics
-## 
-##           Reference
-## Prediction    A    B    C    D    E
-##          A 2224    9    0    1    0
-##          B    3 1507   13    0    0
-##          C    3    1 1347   20    5
-##          D    1    0    8 1263    2
-##          E    1    1    0    2 1435
-## 
-## Overall Statistics
-##                                          
-##                Accuracy : 0.9911         
-##                  95% CI : (0.9887, 0.993)
-##     No Information Rate : 0.2845         
-##     P-Value [Acc > NIR] : < 2.2e-16      
-##                                          
-##                   Kappa : 0.9887         
-##  Mcnemar's Test P-Value : NA             
-## 
-## Statistics by Class:
-## 
-##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9964   0.9928   0.9846   0.9821   0.9951
-## Specificity            0.9982   0.9975   0.9955   0.9983   0.9994
-## Pos Pred Value         0.9955   0.9895   0.9789   0.9914   0.9972
-## Neg Pred Value         0.9986   0.9983   0.9968   0.9965   0.9989
-## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-## Detection Rate         0.2835   0.1921   0.1717   0.1610   0.1829
-## Detection Prevalence   0.2847   0.1941   0.1754   0.1624   0.1834
-## Balanced Accuracy      0.9973   0.9951   0.9901   0.9902   0.9973
+
 ```
  
 
@@ -123,20 +95,17 @@ Expected out of sample error
 
 The ml-testing.csv file contained 20 test cases. The file was subjected to the same data cleaning techniques as was used with the pml-training.csv file that was used to generate the model
 
+```{r, echo=TRUE}
 
-```r
 ev <- read.csv("pml-testing.csv", na.strings=c("#DIV/0!") )
 ev <- ev[,c(9:160)]
 ev <- ev[-r]
 ev <- ev[,nacols]
 testclass1 <- predict(model, ev)
 testclass1
-```
 
-```
-##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
-##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
-## Levels: A B C D E
+
+
 ```
 
 
