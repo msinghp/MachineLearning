@@ -35,7 +35,7 @@ The test data came from:
 
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
-The data consisted of 160 fields consisting of actual mesurement data together with derived data such as standard deviation, max, min and variances
+The data consisted of 160 fields consisting of actual mesurement data together with derived data such as standard deviation, max, min and variances. The data was collected from  from accelerometers on the belt, forearm, arm, and dumbell of 6 participants.
 
 #####Study Design
 
@@ -200,6 +200,16 @@ testclass1
 ![](mlproj_files/figure-html/unnamed-chunk-6-1.png) 
 
 The matrix indicates how important that variable is in classifying the data. The plot shows the importance of each variable with the most importanct variable at the top of the list.
+
+
+
+![](mlproj_files/figure-html/unnamed-chunk-7-1.png) 
+
+
+The plot  above traces the error rates (out-of-bag, and by each response
+category) as the number of trees increases. 
+
+
 
 #####Conclusion
 
