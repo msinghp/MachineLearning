@@ -1,5 +1,5 @@
 # 
-#### Assessment of the eficacy of Exercise Activity
+#### Assessment of the efficacy of Exercise Activity
 
 #####Loading the required Libraries
 
@@ -133,7 +133,7 @@ model
  
 #####3. Running the model against the testing set
  
-Running the model aginst the the testing set yielded the following statistics forthe confusion matrix
+Running the model aginst the the testing set yielded the following statistics for the confusion matrix
  
 
 ```r
